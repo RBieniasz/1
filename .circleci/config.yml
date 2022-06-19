@@ -4,10 +4,11 @@ jobs:
     machine:
       image: ubuntu-2004:202104-01
     steps:
-      - checkout
-      - run: make deps
-      - run: make link
-      - run: make test
+    - checkout
+    - run: make deps
+    - run: make link
+    - run: make test
+    - run: make docker_build
 workflows:
   basic:
     jobs:
